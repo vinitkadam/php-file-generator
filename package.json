@@ -23,8 +23,8 @@
         "enum"
     ],
     "activationEvents": [],
+    "license": "MIT",
     "main": "./out/extension.js",
-    "icon": "images/icon.png",
     "contributes": {
         "commands": [
             {
@@ -159,16 +159,6 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Add declare(strict_types=1) to generated files"
-                },
-                "phpClassGenerator.addConstructor": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Add empty constructor to new classes"
-                },
-                "phpClassGenerator.author": {
-                    "type": "string",
-                    "default": "",
-                    "description": "Author name for docblock comments"
                 }
             }
         }

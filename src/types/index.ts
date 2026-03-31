@@ -11,11 +11,6 @@ export interface PhpFileConfig {
     className: string;
     namespace: string;
     directory: string;
-    extendsClass?: string;
-    implementsInterfaces?: string[];
-    isFinal?: boolean;
-    isReadonly?: boolean;
-    enumBackingType?: 'string' | 'int' | null;
     useStrictTypes?: boolean;
 }
 

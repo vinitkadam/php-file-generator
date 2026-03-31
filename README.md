@@ -1,4 +1,4 @@
-# PHP Class Generator
+# PHP File Generator
 
 PHPStorm-like PHP file generator for VS Code. Create classes, abstract classes, final classes, interfaces, traits, and enums with auto-detected namespaces from `composer.json` PSR-4 mappings.
 

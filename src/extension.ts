@@ -4,7 +4,7 @@ import { PhpFileType } from './types';
 
 export function activate(context: vscode.ExtensionContext) {
 
-    console.log('PHP Class Generator is now active!');
+    console.log('PHP File Generator is now active!');
 
     // Define all commands and their corresponding types
     const commands: { command: string; type: PhpFileType }[] = [

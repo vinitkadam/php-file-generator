@@ -3,7 +3,7 @@ default:
     - hb
 
 variables:
-  PACKAGE_NAME: php-class-generator
+  PACKAGE_NAME: php-file-generator
 
 release:
   image: node:20
@@ -26,7 +26,7 @@ release:
     - |
       release-cli create --name "Release ${CI_COMMIT_TAG}" \
         --tag-name "${CI_COMMIT_TAG}" \
-        --description "PHP Class Generator ${CI_COMMIT_TAG}" \
+        --description "PHP File Generator ${CI_COMMIT_TAG}" \
         --assets-link "{\"name\":\"${VSIX_FILE}\",\"url\":\"${VSIX_URL}\",\"link_type\":\"package\"}"
   artifacts:
     paths:

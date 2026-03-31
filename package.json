@@ -1,7 +1,7 @@
 {
-    "name": "php-class-generator",
-    "displayName": "PHP Class Generator",
-    "description": "PHPStorm-like PHP class, interface, trait, and enum generator with auto namespace detection",
+    "name": "php-file-generator",
+    "displayName": "PHP File Generator",
+    "description": "PHPStorm-like PHP file generator for classes, interfaces, traits, and enums with auto namespace detection",
     "version": "1.0.0",
     "publisher": "vinitkadam",
     "author": {
@@ -156,7 +156,7 @@
             }
         ],
         "configuration": {
-            "title": "PHP Class Generator",
+            "title": "PHP File Generator",
             "properties": {
                 "phpClassGenerator.useStrictTypes": {
                     "type": "boolean",

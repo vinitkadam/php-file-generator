@@ -1,0 +1,32 @@
+{
+  "changelists": [
+    {
+      "name": "Default",
+      "files": [
+        ".gitignore",
+        ".vscode-test.mjs",
+        ".vscode/extensions.json",
+        ".vscode/launch.json",
+        ".vscode/settings.json",
+        ".vscode/tasks.json",
+        ".vscodeignore",
+        "CHANGELOG.md",
+        "README.md",
+        "eslint.config.mjs",
+        "package-lock.json",
+        "package.json",
+        "src/extension.ts",
+        "src/test/extension.test.ts",
+        "src/types/index.ts",
+        "tsconfig.json",
+        "vsc-extension-quickstart.md",
+        ".vscode/changelists.json",
+        "src/utils/namespaceResolver.ts",
+        "src/utils/templateEngine.ts",
+        "src/utils/fileHelper.ts",
+        "src/commands/createPhpFile.ts"
+      ]
+    }
+  ],
+  "active": "Default"
+}

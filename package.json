@@ -1,0 +1,194 @@
+{
+    "name": "php-class-generator",
+    "displayName": "PHP Class Generator",
+    "description": "PHPStorm-like PHP class, interface, trait, and enum generator with auto namespace detection",
+    "version": "1.0.0",
+    "publisher": "your-publisher-name",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Other"
+    ],
+    "keywords": [
+        "php",
+        "class",
+        "generator",
+        "namespace",
+        "phpstorm",
+        "interface",
+        "trait",
+        "enum"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "icon": "images/icon.png",
+    "contributes": {
+        "commands": [
+            {
+                "command": "phpClassGenerator.newPhpFile",
+                "title": "New PHP File...",
+                "category": "PHP",
+                "icon": "$(file-add)"
+            },
+            {
+                "command": "phpClassGenerator.newClass",
+                "title": "New PHP Class",
+                "category": "PHP"
+            },
+            {
+                "command": "phpClassGenerator.newAbstractClass",
+                "title": "New PHP Abstract Class",
+                "category": "PHP"
+            },
+            {
+                "command": "phpClassGenerator.newFinalClass",
+                "title": "New PHP Final Class",
+                "category": "PHP"
+            },
+            {
+                "command": "phpClassGenerator.newInterface",
+                "title": "New PHP Interface",
+                "category": "PHP"
+            },
+            {
+                "command": "phpClassGenerator.newTrait",
+                "title": "New PHP Trait",
+                "category": "PHP"
+            },
+            {
+                "command": "phpClassGenerator.newEnum",
+                "title": "New PHP Enum",
+                "category": "PHP"
+            }
+        ],
+        "submenus": [
+            {
+                "id": "phpClassGenerator.submenu",
+                "label": "New PHP..."
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "submenu": "phpClassGenerator.submenu",
+                    "group": "navigation@-1",
+                    "when": "explorerResourceIsFolder"
+                },
+                {
+                    "submenu": "phpClassGenerator.submenu",
+                    "group": "navigation@-1",
+                    "when": "resourceExtname == .php"
+                }
+            ],
+            "phpClassGenerator.submenu": [
+                {
+                    "command": "phpClassGenerator.newPhpFile",
+                    "group": "1_quick@0"
+                },
+                {
+                    "command": "phpClassGenerator.newClass",
+                    "group": "2_types@1"
+                },
+                {
+                    "command": "phpClassGenerator.newAbstractClass",
+                    "group": "2_types@2"
+                },
+                {
+                    "command": "phpClassGenerator.newFinalClass",
+                    "group": "2_types@3"
+                },
+                {
+                    "command": "phpClassGenerator.newInterface",
+                    "group": "2_types@4"
+                },
+                {
+                    "command": "phpClassGenerator.newTrait",
+                    "group": "2_types@5"
+                },
+                {
+                    "command": "phpClassGenerator.newEnum",
+                    "group": "2_types@6"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "phpClassGenerator.newPhpFile",
+                    "when": "workspaceFolderCount > 0"
+                },
+                {
+                    "command": "phpClassGenerator.newClass",
+                    "when": "workspaceFolderCount > 0"
+                },
+                {
+                    "command": "phpClassGenerator.newAbstractClass",
+                    "when": "workspaceFolderCount > 0"
+                },
+                {
+                    "command": "phpClassGenerator.newFinalClass",
+                    "when": "workspaceFolderCount > 0"
+                },
+                {
+                    "command": "phpClassGenerator.newInterface",
+                    "when": "workspaceFolderCount > 0"
+                },
+                {
+                    "command": "phpClassGenerator.newTrait",
+                    "when": "workspaceFolderCount > 0"
+                },
+                {
+                    "command": "phpClassGenerator.newEnum",
+                    "when": "workspaceFolderCount > 0"
+                }
+            ]
+        },
+        "keybindings": [
+            {
+                "command": "phpClassGenerator.newPhpFile",
+                "key": "ctrl+alt+p",
+                "mac": "cmd+alt+p",
+                "when": "workspaceFolderCount > 0"
+            }
+        ],
+        "configuration": {
+            "title": "PHP Class Generator",
+            "properties": {
+                "phpClassGenerator.useStrictTypes": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Add declare(strict_types=1) to generated files"
+                },
+                "phpClassGenerator.addConstructor": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Add empty constructor to new classes"
+                },
+                "phpClassGenerator.author": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Author name for docblock comments"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile",
+        "lint": "eslint src --ext ts",
+        "package": "vsce package"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^20.0.0",
+        "@types/vscode": "^1.85.0",
+        "@typescript-eslint/eslint-plugin": "^8.0.0",
+        "@typescript-eslint/parser": "^8.0.0",
+        "@vscode/vsce": "^2.22.0",
+        "eslint": "^9.0.0",
+        "typescript": "^5.3.0"
+    }
+}

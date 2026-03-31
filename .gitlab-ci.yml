@@ -8,7 +8,10 @@ variables:
 release:
   image: node:20
   before_script:
-    - apt-get update && apt-get install -y curl
+    - |
+      curl -L --output /usr/local/bin/release-cli \
+        "https://gitlab.com/api/v4/projects/gitlab-org%2Frelease-cli/packages/generic/release-cli/latest/release-cli-linux-amd64"
+      chmod +x /usr/local/bin/release-cli
     - npm ci
   script:
     - npx vsce package --allow-missing-repository
@@ -21,7 +24,7 @@ release:
     - VSIX_URL="${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/${PACKAGE_NAME}/${CI_COMMIT_TAG}/${VSIX_FILE}"
     - echo "Download URL - ${VSIX_URL}"
     - |
-      npx -y @gitlab-org/release-cli create --name "Release ${CI_COMMIT_TAG}" \
+      release-cli create --name "Release ${CI_COMMIT_TAG}" \
         --tag-name "${CI_COMMIT_TAG}" \
         --description "PHP Class Generator ${CI_COMMIT_TAG}" \
         --assets-link "{\"name\":\"${VSIX_FILE}\",\"url\":\"${VSIX_URL}\",\"link_type\":\"package\"}"

@@ -3,7 +3,10 @@
     "displayName": "PHP Class Generator",
     "description": "PHPStorm-like PHP class, interface, trait, and enum generator with auto namespace detection",
     "version": "1.0.0",
-    "publisher": "your-publisher-name",
+    "publisher": "vinitkadam",
+    "author": {
+        "name": "Vinit Kadam"
+    },
     "engines": {
         "vscode": "^1.85.0"
     },

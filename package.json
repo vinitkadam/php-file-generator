@@ -2,7 +2,7 @@
     "name": "php-file-generator",
     "displayName": "PHP File Generator",
     "description": "PHPStorm-like PHP file generator for classes, interfaces, traits, and enums with auto namespace detection",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "vinitkadam",
     "author": {
         "name": "Vinit Kadam"

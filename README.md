@@ -13,13 +13,18 @@ PHPStorm-like PHP file generator for VS Code. Create classes, abstract classes, 
 
 ## Installation
 
-### Download and install `.vsix`
+### VS Code Marketplace
 
-1. Download the `.vsix` from [Releases](http://tree.mn/vinit.ka/php-class-generator/-/releases).
-2. Open VS Code.
-3. Open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
-4. Run **Extensions: Install from VSIX...**.
-5. Select the downloaded `.vsix` file.
+1. Open VS Code
+2. Go to Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+3. Search for **PHP File Generator**
+4. Click **Install**
+
+Or install from the command line:
+
+```bash
+code --install-extension vinitkadam.php-file-generator
+```
 
 ## Usage
 
